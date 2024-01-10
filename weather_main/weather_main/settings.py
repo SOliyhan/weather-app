@@ -1,5 +1,4 @@
 import os
-import environ
 from pathlib import Path
 from dotenv import load_dotenv
 load_dotenv()
@@ -11,12 +10,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 API_KEY = os.getenv('API_KEY')
 SECRET_KEY = os.getenv('SECRET_KEY', 'dev-secret-key')
 
-
-
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['.vercel.app']
 
 
 # Application definition
